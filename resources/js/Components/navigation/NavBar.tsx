@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 import { useState } from "react";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
-import styles from "@/Components/navigation/Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 
 const NAV_LINKS = [
     { label: "Home", href: "/" },

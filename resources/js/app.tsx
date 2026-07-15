@@ -1,4 +1,5 @@
 import "../css/app.scss";
+import "@tabler/icons-webfont/dist/tabler-icons.css";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 

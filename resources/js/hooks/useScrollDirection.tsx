@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type ScrollDirection = "up" | "down";
 
@@ -10,11 +10,12 @@ export function useScrollDirection(threshold = 10) {
         lastScrollY.current = window.scrollY;
 
         const handleScroll = () => {
-            const currentScrollY = window.screenY;
+            const currentScrollY = window.scrollY;
             const diff = currentScrollY - lastScrollY.current;
 
             if (Math.abs(diff) < threshold) return;
 
+            // Always show navbar near the top of the page
             if (currentScrollY < 80) {
                 setDirection("up");
             } else {
@@ -27,5 +28,6 @@ export function useScrollDirection(threshold = 10) {
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, [threshold]);
+
     return direction;
 }
