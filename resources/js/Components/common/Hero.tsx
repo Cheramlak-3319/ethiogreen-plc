@@ -1,63 +1,54 @@
-import Container from "@/components/ui/Container";
+import Container from "@/Components/ui/Container";
+import styles from "@/Components/common/Hero.module.scss";
 
-export default function Hero() {
+interface HeroStat {
+    value: string;
+    label: string;
+}
+
+const STATS: HeroStat[] = [
+    { value: "12+", label: "Years of Experience" },
+    { value: "100+", label: "Products" },
+    { value: "50+", label: "Countries Served" },
+    { value: "100%", label: "Traceability" },
+    { value: "30,000+", label: "Smallholder Farmers Supported" },
+    { value: "30+", label: "Export Destinations" },
+];
+
+interface HeroProps {
+    imageSrc?: string; // optional — falls back to placeholder if not provided
+}
+
+export default function Hero({ imageSrc }: HeroProps) {
     return (
-        <section className="py-5 bg-light">
+        <section className={styles.hero}>
             <Container>
-                <div className="row align-items-center">
-                    <div className="col-lg-6">
-                        <h1 className="display-4 fw-bold">
-                            Building Ethiopia's Future
+                <div className={styles.grid}>
+                    <div>
+                        <div className={styles.badge}>
+                            <i className="bi bi-leaf-fill" aria-hidden="true" />
+                            Sustainably grown &amp; processed
+                        </div>
+                        <h1 className={styles.headline}>
+                            From Ethiopian soil
+                            <br />
+                            to global markets
                         </h1>
-
-                        <p className="lead my-4">
-                            Ethio-Green Agro-Processing PLC is a start-up that
-                            will process and market premium, naturally
-                            solar-dried fruits, vegetables, and spice powders.
-                            Capitalizing on Ethiopia’s abundant horticultural
-                            production and favourable solar radiation, the
-                            company will source fresh produce directly from
-                            smallholder farmer cooperatives in the Rift Valley,
-                            process it using hygienic solar tunnel dryers, and
-                            sell value-added products under the brand SunRipe.
-                            The Opportunity: Ethiopia loses an estimated 30–40%
-                            of its fresh fruits and vegetables post-harvest due
-                            to lack of processing and cold chain infrastructure.
-                            Simultaneously, urban health-conscious consumers and
-                            the hospitality sector increasingly demand natural,
-                            additive-free dried snacks and ingredients that are
-                            currently mostly imported. Ethio-Green substitutes
-                            imports, reduces waste, and creates consistent
-                            market access for farmers.
+                        <p className={styles.subtext}>
+                            EthioGreen delivers premium agro-processed goods
+                            with full traceability and sustainable sourcing —
+                            backed by 12+ years of hands-on experience in the
+                            industry.
                         </p>
-                        <p className="lead my-4">
-                            At SunRipe, we believe Ethiopia’s incredible harvest
-                            deserves more than to be wasted. Every year, up to
-                            40% of our nation’s fresh mangoes, tomatoes, and
-                            pineapples spoil before they ever reach a plate. We
-                            set out to change that. Born in the sun-drenched
-                            Rift Valley and processed at our facility in Mojo,
-                            SunRipe sources fruit directly from smallholder
-                            farmers we know and trust, then gently dries it
-                            using nothing but Ethiopia’s abundant, natural
-                            sunlight—zero additives, zero preservatives. The
-                            result is a range of brilliantly coloured, intensely
-                            flavoured dried fruits, vegetable powders, and
-                            healthy snacks that lock in nutrition while creating
-                            a fair, reliable market for the farmers who grow
-                            them. From our farm to your family, every pack of
-                            SunRipe is a taste of Ethiopian sunshine, a stand
-                            against food waste, and a step towards a healthier,
-                            more sustainable food system. Rediscover nature’s
-                            sweetness—the way it’s meant to be.
-                        </p>
-
-                        <button className="btn btn-success btn-lg">
-                            Explore More
-                        </button>
+                        <div className={styles.actions}>
+                            <button className={styles.primaryButton}>
+                                Explore Products
+                            </button>
+                            <button className={styles.secondaryButton}>
+                                Contact Us
+                            </button>
+                        </div>
                     </div>
-
-                    <div className="col-lg-6">Hero Image</div>
                 </div>
             </Container>
         </section>

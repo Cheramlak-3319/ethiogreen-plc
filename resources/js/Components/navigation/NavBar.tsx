@@ -3,7 +3,11 @@ import { useState } from "react";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 import styles from "./Navbar.module.scss";
 
-const NAV_LINKS = [
+interface NavLink {
+    label: string;
+    href: string;
+}
+const NAV_LINKS: NavLink[] = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Products", href: "/products" },

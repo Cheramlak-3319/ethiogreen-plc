@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+        padding: 0 16px;
+    }
+}
+
+.sm {
+    max-width: 720px;
+}
+
+.md {
+    max-width: 900px;
+}
+
+.lg {
+    max-width: 1100px; // matches your navbar/footer content width
+}
+
+.xl {
+    max-width: 1320px;
+}

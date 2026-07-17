@@ -103,6 +103,7 @@
     display: flex;
     gap: 8px;
     align-items: flex-start;
+    text-decoration: none;
 
     i {
         font-size: 14px;
@@ -115,5 +116,79 @@
     font-size: 13px;
     color: #a8b5ae;
     line-height: 1.5;
+}
+
+.newsletterText {
+    font-size: 13px;
+    color: #a8b5ae;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.newsLetterForm {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 4px 4px 4px 14px;
+    align-items: center;
+}
+
+.newsletterInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #ffffff;
+
+    &::placeholder {
+        color: #6b7a70;
+    }
+}
+.newsletterButton {
+    background: #4ade80;
+    border: none;
+    color: #14261f;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+        background: #3fc770;
+    }
+}
+
+.bottomBar {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 12px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #6b7a70;
+}
+
+.legalLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.legalLink {
+    font-size: 12px;
+    color: #e8efe9;
     text-decoration: none;
+
+    &:hover {
+        color: #a8b5ae;
+    }
 }
