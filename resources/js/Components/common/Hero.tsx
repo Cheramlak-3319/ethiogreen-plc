@@ -8,10 +8,7 @@ interface HeroStat {
 
 const STATS: HeroStat[] = [
     { value: "12+", label: "Years of Experience" },
-    { value: "100+", label: "Products" },
-    { value: "50+", label: "Countries Served" },
     { value: "100%", label: "Traceability" },
-    { value: "30,000+", label: "Smallholder Farmers Supported" },
     { value: "30+", label: "Export Destinations" },
 ];
 
@@ -48,6 +45,30 @@ export default function Hero({ imageSrc }: HeroProps) {
                                 Contact Us
                             </button>
                         </div>
+                        <div className={styles.stats}>
+                            {STATS.map((stats) => (
+                                <div key={stats.label}>
+                                    <div className={styles.statsValue}>
+                                        {stats.value}
+                                    </div>
+                                    <div className={styles.statsLabel}>
+                                        {stats.label}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className={styles.imagePanal}>
+                        {imageSrc ? (
+                            <img
+                                src={imageSrc}
+                                alt="EthioGreen agro-processing facility"
+                            />
+                        ) : (
+                            <div className={styles.imagePlaceholder}>
+                                [ product / farm photo ]
+                            </div>
+                        )}
                     </div>
                 </div>
             </Container>
