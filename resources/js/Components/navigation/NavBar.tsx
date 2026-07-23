@@ -46,15 +46,15 @@ export default function Navbar() {
                     </div>
 
                     <div className={styles.actions}>
-                        <button
+                        <Link
                             type="button"
                             aria-label="Search"
                             className={styles.iconButton}
                         >
                             <i className="ti ti-search" aria-hidden="true" />
-                        </button>
+                        </Link>
 
-                        <button
+                        <Link
                             type="button"
                             aria-label="Menu"
                             className={`${styles.iconButton} ${styles.hamburger}`}
@@ -66,11 +66,11 @@ export default function Navbar() {
                                 }
                                 aria-hidden="true"
                             />
-                        </button>
+                        </Link>
 
-                        <button type="button" className={styles.ctaButton}>
+                        <Link type="button" className={styles.ctaButton}>
                             Get started
-                        </button>
+                        </Link>
                     </div>
                 </nav>
             </div>

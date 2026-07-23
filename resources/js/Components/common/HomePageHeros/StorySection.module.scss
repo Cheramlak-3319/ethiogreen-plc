@@ -11,6 +11,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    max-width: 1000px;
 }
 
 .title {
@@ -21,12 +22,24 @@
 }
 
 .history {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.6;
-    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e2ff9f;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
 }
 
+.historyPlace {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.brandMessage {
+    font-size: 16px;
+    font-weight: 700;
+}
 .brandImages {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

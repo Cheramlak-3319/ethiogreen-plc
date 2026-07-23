@@ -1,5 +1,5 @@
 import Container from "@/Components/ui/Container";
-import styles from "@/Components/common/Hero.module.scss";
+import styles from "@/Components/common/HomePageHeros/Hero.module.scss";
 
 interface HeroStat {
     value: string;
