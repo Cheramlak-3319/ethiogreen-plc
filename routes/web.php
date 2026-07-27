@@ -16,7 +16,13 @@ Route::get('/about', function () {
      return Inertia::render(
         'features/website/about/AboutPage'
     );
-});
+})->name('about');
 
+
+Route::get('/contact', function () {
+     return Inertia::render(
+        'features/website/contact/ContactPage'
+    );
+})->name('contact');
 
 require __DIR__.'/auth.php';

@@ -1,0 +1,32 @@
+.card {
+    background: #ffffff;
+    border: 0.5px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    i {
+        font-size: 16px;
+        color: #16a34a;
+        margin-top: 2px;
+    }
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.value {
+    font-size: 12px;
+    color: #5a5a5a;
+    margin-top: 2px;
+}
+
+.map {
+    margin-top: 4px;
+}

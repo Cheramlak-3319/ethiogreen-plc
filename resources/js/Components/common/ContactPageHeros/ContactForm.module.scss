@@ -1,0 +1,85 @@
+.form {
+    background: #ffffff;
+    border: 0.5px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.field {
+    margin-bottom: 14px;
+}
+
+.label {
+    font-size: 12px;
+    color: #5a5a5a;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 0.5px solid #e5e5e5;
+    background: #fafafa;
+    padding: 9px 12px;
+    font-size: 14px;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+        border-color: #16a34a;
+    }
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.error {
+    font-size: 12px;
+    color: #dc2626;
+    margin-top: 4px;
+}
+
+.submitButton {
+    width: 100%;
+    background: #16a34a;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background: #128a3e;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.successMessage {
+    background: rgba(74, 222, 128, 0.12);
+    color: #128a3e;
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
