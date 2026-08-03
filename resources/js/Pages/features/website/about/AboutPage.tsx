@@ -12,7 +12,7 @@ export default function AboutPage() {
                 <Container>
                     <div className={styles.hero}>
                         <ValuesGrid />
-                        <div style={{ marginBottom: "40px" }}>
+                        <div className={styles.timeline}>
                             <TimeLine />
                         </div>
                     </div>

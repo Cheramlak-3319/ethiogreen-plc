@@ -22,11 +22,7 @@ class HandleInertiaRequests extends Middleware
         return parent::version($request);
     }
 
-    /**
-     * Define the props that are shared by default.
-     *
-     * @return array<string, mixed>
-     */
+    
     public function share(Request $request): array
 {
     return array_merge(parent::share($request), [
