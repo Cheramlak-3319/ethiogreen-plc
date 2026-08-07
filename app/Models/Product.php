@@ -3,55 +3,37 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
+    use HasFactory, SoftDeletes;
+
+
     protected $fillable = [
+        'category_id',
         'name',
         'slug',
         'description',
         'short_description',
         'sku',
-        'category_id',
-        'brand_id',
-        'merchant_id',
-        'selling_price',
-        'cost_price',
-        'quantity',
-        'min_stock',
-        'status',
-        'weight',
-        'created_by',
-        'updated_by',
-        'published_at'
+        'price',
+        'unit',
+        'is_featured',
+        'is_active'
     ];
 
-    protected $guarded = ['id'];
-
-    protected $table = 'products';
-
-    protected $casts = [
-        'selling_price' => 'decimal:2',
-        'cost_price' => 'decimal:2',
-        'weight' => 'decimal:2',
-    ];
-
-    protected $primaryKey = 'id';
-
-    protected $timestamps = true;
 
     public function category()
     {
-        return $this->belongsTo(Categorie::class, 'category_id');
+        return $this->belongsTo(Category::class);
     }
 
-    public function brand()
+
+    public function images()
     {
-        return $this->belongsTo(Brand::class, 'brand_id');
+        return $this->hasMany(ProductImage::class);
     }
 
-    public function merchant()
-    {
-        return $this->belongsTo(User::class, 'merchant_id');
-    }
 }
