@@ -19,8 +19,6 @@ return new class extends Migration
             $table->string('short_description', 300)->nullable();
             $table->string('sku')->unique();
             $table->foreignId('category_id')->constrained()->restrictOnDelete();
-            $table->foreignId('brand_id')->nullable()->constrained()->nullOnDelete();
-            $table->foreignId('merchant_id')->constrained('users')->restrictOnDelete();
             $table->decimal('selling_price', 10, 2)->default(0);
             $table->decimal('cost_price', 10, 2)->default(0);
             $table->unsignedInteger('quantity')->default(0);
